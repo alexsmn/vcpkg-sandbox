@@ -12,7 +12,7 @@ Watch `c:\vcpkg` directory created unexpectedly.
 
 ## Install
 
-`install.bat` produces details logs by instructing Vcpkg to run CMake with `--trace-expand` command-line option. Required the [pull request](https://github.com/microsoft/vcpkg/pull/12877) has to be merged at first.
+`install.bat` produces details logs by instructing Vcpkg to run CMake with `--trace-expand` command-line option. Requires the [pull request](https://github.com/microsoft/vcpkg/pull/12877) to be merged first.
 
 ## Patch
 
