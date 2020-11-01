@@ -1,0 +1,2 @@
+rem Requires https://github.com/microsoft/vcpkg/pull/12877
+D:/vcpkg/vcpkg.exe install --triplet x86-windows --vcpkg-root D:/vcpkg --x-manifest-root=C:/Tests/vcpkg-sandbox/bug-1 --x-install-root=C:/Tests/vcpkg-sandbox/bug-1/build/vcpkg_installed --cmake-args="--trace-expand"

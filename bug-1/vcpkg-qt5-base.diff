@@ -1,0 +1,17 @@
+ ports/qt5-base/cmake/qt_fix_makefile_install.cmake | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/ports/qt5-base/cmake/qt_fix_makefile_install.cmake b/ports/qt5-base/cmake/qt_fix_makefile_install.cmake
+index 95831d29f..70006e49a 100644
+--- a/ports/qt5-base/cmake/qt_fix_makefile_install.cmake
++++ b/ports/qt5-base/cmake/qt_fix_makefile_install.cmake
+@@ -20,7 +20,7 @@ function(qt_fix_makefile_install BUILD_DIR)
+     foreach(MAKEFILE ${MAKEFILES})
+         file(READ "${MAKEFILE}" _contents)
+         #Set the correct install directory to packages
+-        string(REPLACE "(INSTALL_ROOT)${INSTALLED_DIR_WITHOUT_DRIVE}" "(INSTALL_ROOT)${PACKAGES_DIR_WITHOUT_DRIVE}" _contents "${_contents}")
++        string(REPLACE "C:$(INSTALL_ROOT)${INSTALLED_DIR_WITHOUT_DRIVE}" "D:$(INSTALL_ROOT)${PACKAGES_DIR_WITHOUT_DRIVE}" _contents "${_contents}")
+         file(WRITE "${MAKEFILE}" "${_contents}")
+     endforeach()
+ endfunction()
+\ No newline at end of file
