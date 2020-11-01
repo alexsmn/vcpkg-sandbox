@@ -9,3 +9,11 @@ https://github.com/microsoft/vcpkg/issues/14133
 Vcpkg will start installing QT5, even if it was installed globally. Then it will fail.
 
 Watch `c:\vcpkg` directory created unexpectedly.
+
+## Install
+
+`install.bat` produces details logs by instructing Vcpkg to run CMake with `--trace-expand` command-line option. Required the [pull request](https://github.com/microsoft/vcpkg/pull/12877) has to be merged at first.
+
+## Patch
+
+Apply `vcpkg-qt5-base.patch` for Vcpkg itself to fix the specific scenario.
